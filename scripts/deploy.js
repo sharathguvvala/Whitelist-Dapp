@@ -15,4 +15,4 @@ main().then(()=>{process.exit(0)}).catch((error)=>{
     process.exit(1)
 })
 
-//smart contract address 0x2c3df319A8A2B2b343c18db43EEEdb563efDB170
+//smart contract address 0x2379400670D3d207dbf3dA5d347D03471dAcC890

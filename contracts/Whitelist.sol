@@ -15,7 +15,7 @@ contract Whitelist {
     }
 
     modifier  checksToAddInToWhitelist {
-        require(whitelistedAddresses[msg.sender],"Sender already in whitelist");
+        require(!whitelistedAddresses[msg.sender],"Sender already in whitelist");
         require(numAddressesWhitelisted<maxWhitelistAddresses,"Max limit reached");
         _;
     }

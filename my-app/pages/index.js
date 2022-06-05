@@ -23,8 +23,8 @@ export default function Home() {
       const provider = await web3ModalRef.current.connect()
       const web3Provider = new providers.Web3Provider(provider)
       const {chainId} = await web3Provider.getNetwork()
-      if(chainId!==3){
-        window.alert("Change the network to Ropsten!")
+      if(chainId!==5){
+        window.alert("Change the network to Goerli!")
       }
       if(needSigner){
         const signer = web3Provider.getSigner()
@@ -136,7 +136,7 @@ export default function Home() {
   useEffect(()=>{
     if(!walletConnected){
       web3ModalRef.current = new Web3Modal({
-        network: "ropsten",
+        network: "goerli",
         providerOptions: {},
         disabledInjectedProvider: false,
       })
